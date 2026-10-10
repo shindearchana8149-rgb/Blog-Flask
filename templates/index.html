@@ -1,0 +1,6 @@
+<!doctype html><title>My Blog</title>
+<h1>My Blog</h1><a href="/new">New post</a>
+{% for p in posts %}
+<article><h2>{{p.title}}</h2><p>{{p.content}}</p>
+<form method="post" action="/delete/{{p.id}}"><button>Delete</button></form></article>
+{% else %}<p>No posts.</p>{% endfor %}
